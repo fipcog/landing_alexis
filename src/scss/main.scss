@@ -1,0 +1,52 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+  color: #666;
+}
+
+:focus::placeholder {
+  color: transparent;
+}
+
+::selection {
+  //background-color: $accent;
+  //color: #fff;
+}
+
+body {
+  font-size: 15px;
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 1.65;
+  font-family: $default-font;
+  overflow-x: hidden;
+  color: $text;
+  background-color: $bgr;
+  input, textarea {
+    border: #666 1px solid;
+    outline: none;
+    &:focus:required:invalid {
+      border-color: red;
+    }
+    &:required:valid {
+      border-color: green;
+    }
+  }
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/btn";
