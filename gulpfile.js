@@ -20,11 +20,10 @@ gulp.task('serve', function() {
     browserSync.init({
         server: "src/"
     });
-    gulp.watch("scr/sass/*.sass", gulp.series('sass'));
+    gulp.watch("src/scss/**/*.scss", gulp.series('sass'));
     gulp.watch("scr/*.html").on('change', () => {
         browserSync.reload();
     });
-
 });
 
 gulp.task('default', gulp.series('sass', 'serve'));
