@@ -14,8 +14,9 @@
   height: 700px;
 
   background: $img_grad;
-
   border: 10px solid $img_border;
+
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -33,15 +34,8 @@
   padding-right: 85px;
 
   background-color: $bgr;
-  box-shadow: 6px -6px 10px 1px $shadow;
+  @include shadow;
   box-sizing: border-box;
-}
-
-.about_us__header {
-  margin-top: 0;
-  margin-bottom: 40px;
-
-  font-size: 50px;
 }
 
 @media (max-width: 1200px) {

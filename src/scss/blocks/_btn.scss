@@ -18,16 +18,16 @@
   box-sizing: border-box;
   outline-color: transparent;
 
-  transition: .1s;
+  transition: .2s;
 
   &:hover {
     cursor: pointer;
-    transition: .1s;
+    transition: .2s;
     background: $accent_1;
     text-decoration: none;
   }
 
   &:not(:hover) {
-    transition: .1s;
+    transition: .2s;
   }
 }

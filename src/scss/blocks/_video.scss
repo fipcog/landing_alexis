@@ -1,0 +1,50 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 500px;
+
+  @include desct_padding;
+
+  color: $alt-text;
+  background-color: $alt_bgr;
+}
+
+.video__title {
+  font-size: 30px;
+}
+
+.video__btn {
+  width: 80px;
+  height: 80px;
+
+  padding: 0;
+  margin-bottom: 40px;
+
+  fill: $accent_1;
+  background-color: transparent;
+  border-radius: 50%;
+
+  &:hover {
+    background: inherit;
+    fill: $accent_2;
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
+}

@@ -7,13 +7,17 @@ $text: #313131;
 $alt-text: #ffffff;
 $bgr: #ffffff;
 $alt_bgr: #333740;
+$alt_bgr_2: #f7f7f7;
 $img_grad: linear-gradient(to top, #daaca4, #cccccc 75%);
 $img_border: #a7a7a7;
 $shadow: rgba(241, 241, 241, 0.55);
-
-$info-num: #fff;
-$sl-btn: #c6cfd2;
+$transparent_gray: rgba(50, 50, 50, 0.47);
 
 @mixin desct_padding() {
   padding: 150px 390px;
+  box-sizing: border-box;
+}
+
+@mixin shadow() {
+  box-shadow: 6px -6px 10px 1px $shadow;
 }
