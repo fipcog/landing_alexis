@@ -8,6 +8,7 @@ $alt-text: #ffffff;
 $bgr: #ffffff;
 $alt_bgr: #333740;
 $alt_bgr_2: #f7f7f7;
+$alt_bgr_3: #cccccc;
 $img_grad: linear-gradient(to top, #daaca4, #cccccc 75%);
 $img_border: #a7a7a7;
 $shadow: rgba(241, 241, 241, 0.55);
@@ -20,4 +21,25 @@ $transparent_gray: rgba(50, 50, 50, 0.47);
 
 @mixin shadow() {
   box-shadow: 6px -6px 10px 1px $shadow;
+}
+
+@mixin img_wrapper($color) {
+  background: linear-gradient(to top, $color, #cccccc 60%);
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@mixin underline ($color) {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+
+  display: block;
+  width: 265px;
+  height: 3px;
+
+  background-color: $color;
 }

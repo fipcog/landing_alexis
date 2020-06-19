@@ -63,7 +63,8 @@
   width: 100%;
   height: 100%;
 
-  overflow: hidden;
+  @include img_wrapper($accent_4);
+
   img {
     height: 100%;
   }

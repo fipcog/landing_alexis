@@ -13,11 +13,8 @@
   width: 555px;
   height: 700px;
 
-  background: $img_grad;
+  @include img_wrapper($accent_4);
   border: 10px solid $img_border;
-
-  overflow: hidden;
-  box-sizing: border-box;
 }
 
 .about_us__text_content {
