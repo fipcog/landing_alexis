@@ -36,8 +36,12 @@
   height: 50px;
 
   margin-bottom: 25px;
+  padding: 10px 15px;
+
+  font-size: 18px;
 
   border: none;
+  box-sizing: border-box;
 
   &::placeholder {
     text-align: center;
@@ -51,12 +55,14 @@
   padding: 15px 15px;
   margin-bottom: 50px;
 
+  font-size: 18px;
+  font-family: sans-serif;
+
   border: none;
   box-sizing: border-box;
 
   &::placeholder {
     font-size: 16px;
-    font-family: sans-serif;
     text-align: center;
   }
 }
