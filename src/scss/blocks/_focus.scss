@@ -10,6 +10,7 @@
 
 .focus__title {
   text-align: center;
+  @include sectionTitle;
 }
 
 .focus__title_descr {

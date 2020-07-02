@@ -59,6 +59,8 @@
   margin-bottom: 50px;
 
   font-size: 60px;
+  @include sectionTitle;
+  font-weight: normal;
   text-align: center;
 }
 

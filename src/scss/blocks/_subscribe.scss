@@ -12,6 +12,9 @@
 .subscribe__header {
   margin-top: 0;
   margin-bottom: 50px;
+
+  @include sectionTitle;
+  font-weight: normal;
 }
 
 .subscribe__form {

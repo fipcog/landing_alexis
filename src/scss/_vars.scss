@@ -1,4 +1,4 @@
-$default-font: "myriad-pro", sans-serif;
+$default-font: "poppins", sans-serif;
 $accent_1: #38c695;
 $accent_2: #b27cf5;
 $accent_3: #feb960;
@@ -42,4 +42,9 @@ $transparent_gray: rgba(50, 50, 50, 0.47);
   height: 3px;
 
   background-color: $color;
+}
+
+@mixin sectionTitle() {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold;
 }

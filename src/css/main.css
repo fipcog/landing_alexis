@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "poppins";
+  src: url("../fonts/Poppins/PoppinsRegular.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "poppins";
+  src: url("../fonts/Poppins/PoppinsBold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../fonts/LibreBaskerville/LibreBaskervilleRegular.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../fonts/LibreBaskerville/LibreBaskervilleBold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Wisdom Script";
+  src: url("../fonts/WisdomScript/WisdomScript.otf");
+  font-weight: normal; }
+
 ::-webkit-input-placeholder {
   color: #666;
   font-size: 16px; }
@@ -32,7 +57,7 @@ body {
   margin: 0 auto;
   position: relative;
   line-height: 1.65;
-  font-family: "myriad-pro", sans-serif;
+  font-family: "poppins", sans-serif;
   overflow-x: hidden;
   color: #313131;
   background-color: #ffffff; }
@@ -126,6 +151,9 @@ h2 {
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 60px;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold;
+  font-weight: normal;
   text-align: center; }
 
 .header__btn {
@@ -191,6 +219,10 @@ h2 {
   box-shadow: 6px -6px 10px 1px rgba(241, 241, 241, 0.55);
   box-sizing: border-box; }
 
+.about_us__title {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold; }
+
 .focus {
   display: flex;
   flex-direction: column;
@@ -200,7 +232,9 @@ h2 {
   background-color: #f7f7f7; }
 
 .focus__title {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold; }
 
 .focus__title_descr {
   font-size: 18px; }
@@ -261,7 +295,10 @@ h2 {
   background-color: #333740; }
 
 .video__title {
-  font-size: 30px; }
+  font-size: 30px;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold;
+  font-weight: normal; }
 
 .video__btn {
   width: 80px;
@@ -283,7 +320,9 @@ h2 {
   box-sizing: border-box; }
 
 .portfolio__title {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold; }
 
 .portfolio__title_descr {
   display: block;
@@ -375,7 +414,9 @@ h2 {
   background-color: #f7f7f7; }
 
 .team__title {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold; }
 
 .team__title_descr {
   display: block;
@@ -564,7 +605,9 @@ h2 {
   background-color: #f7f7f7; }
 
 .packages__title {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold; }
 
 .packages__title_descr {
   display: block;
@@ -675,7 +718,10 @@ h2 {
 
 .subscribe__header {
   margin-top: 0;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold;
+  font-weight: normal; }
 
 .subscribe__form {
   display: flex;
@@ -709,7 +755,9 @@ h2 {
   background-color: #cccccc; }
 
 .message__title {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: bold; }
 
 .message__title_descr {
   display: block;
@@ -746,7 +794,7 @@ h2 {
   padding: 15px 15px;
   margin-bottom: 50px;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: "poppins", sans-serif;
   border: none;
   box-sizing: border-box; }
   .message__main_content::-webkit-input-placeholder {

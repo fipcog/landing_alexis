@@ -10,6 +10,7 @@
 
 .team__title {
   text-align: center;
+  @include sectionTitle;
 }
 
 .team__title_descr {

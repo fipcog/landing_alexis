@@ -8,6 +8,7 @@
 
 .portfolio__title {
   text-align: center;
+  @include sectionTitle;
 }
 
 .portfolio__title_descr {

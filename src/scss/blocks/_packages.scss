@@ -10,6 +10,7 @@
 
 .packages__title {
   text-align: center;
+  @include sectionTitle;
 }
 
 .packages__title_descr {
