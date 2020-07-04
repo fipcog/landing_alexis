@@ -54,15 +54,31 @@
 
   &:nth-child(1) {
     border-color: $accent_4;
+
+    .focus__svg {
+      fill: $accent_4;
+    }
   }
   &:nth-child(2) {
     border-color: $accent_1;
+
+    .focus__svg {
+      fill: $accent_1;
+    }
   }
   &:nth-child(3) {
     border-color: $accent_2;
+
+    .focus__svg {
+      fill: $accent_2;
+    }
   }
   &:nth-child(4) {
     border-color: $accent_3;
+
+    .focus__svg {
+      fill: $accent_3;
+    }
   }
 }
 

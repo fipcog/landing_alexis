@@ -15,6 +15,28 @@
   display: inline-flex;
 }
 
+.header__logo_link {
+  padding-bottom: 10px;
+
+  font-size: 35px;
+  color: #616161;
+  font-family: "Wisdom Script", sans-serif;
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  span {
+    color: $accent_4;
+  }
+
+  &:hover {
+    span {
+      transition: .2s;
+      color: $accent_1;
+    }
+  }
+}
+
 .header__nav {
   display: inline-flex;
 }
@@ -36,6 +58,10 @@
 .header__nav_link {
   color: $text;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .header__site_title {
@@ -92,17 +118,26 @@
   text-transform: uppercase;
   color: $accent_2;
 
+  .header__features_svg {
+    margin-bottom: 35px;
+    fill: $accent_2;
+  }
+
   &:first-child {
     color: $accent_1;
+
+    .header__features_svg {
+      fill: $accent_1;
+    }
   }
 
   &:last-child {
     color: $accent_3;
-  }
-}
 
-.header__features_svg {
-  margin-bottom: 35px;
+    .header__features_svg {
+      fill: $accent_3;
+    }
+  }
 }
 
 @media (max-width: 1200px) {

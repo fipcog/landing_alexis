@@ -27,6 +27,7 @@ body {
   color: $text;
   background-color: $bgr;
   input, textarea {
+    font-family: $default-font;
     border: #666 1px solid;
     outline: none;
     &:focus:required:invalid {
@@ -63,6 +64,7 @@ h2 {
 @import "blocks/video";
 @import "blocks/portfolio";
 @import "blocks/team";
+@import "blocks/statistic";
 @import "blocks/packages";
 @import "blocks/subscribe";
 @import "blocks/message";

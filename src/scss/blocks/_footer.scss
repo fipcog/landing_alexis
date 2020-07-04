@@ -61,6 +61,24 @@
   }
 }
 
+.footer__logo_link {
+  font-size: 50px;
+  color: #FEF4F2;
+  font-family: "Wisdom Script", sans-serif;
+  text-decoration: none;
+
+  span {
+    color: $accent_4;
+  }
+
+  &:hover {
+    span {
+      transition: .2s;
+      color: $accent_1;
+    }
+  }
+}
+
 .footer__section_head {
   margin-top: 0;
   margin-bottom: 30px;
