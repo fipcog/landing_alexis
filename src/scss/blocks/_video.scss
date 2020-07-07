@@ -9,7 +9,8 @@
   @include desct_padding;
 
   color: $alt-text;
-  background-color: $alt_bgr;
+  background: url("../../img/video.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .video__title {
@@ -30,13 +31,17 @@
   border-radius: 50%;
 
   &:hover {
-    background: inherit;
+    background: transparent;
     fill: $accent_2;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1900px) {
+  .video {
+    height: auto;
 
+    @include  adapt_padding;
+  }
 }
 
 @media (max-width: 992px) {

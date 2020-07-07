@@ -124,8 +124,12 @@
   border-radius: 50%;
 }
 
-@media (max-width: 1200px) {
-
+@media (max-width: 1900px) {
+  .statistic {
+    height: auto;
+    max-height: 465px;
+    @include adapt_padding;
+  }
 }
 
 @media (max-width: 992px) {

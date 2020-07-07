@@ -5,7 +5,7 @@
 
   @include desct_padding;
 
-  background-color: $alt_bgr_2;
+  background-color: $alt_bgr;
 }
 
 .focus__title {
@@ -95,7 +95,45 @@
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1900px) {
+  .focus {
+    @include adapt_padding;
+  }
+
+  .focus__list {
+    flex-wrap: wrap;
+
+    width: 860px;
+  }
+
+  .focus__item {
+    width: 410px;
+    height: 525px;
+
+    padding-top: 85px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    margin-right: 40px;
+    margin-bottom: 40px;
+
+    font-size: 1.2em;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .focus__svg {
+    margin-bottom: 70px;
+  }
+
+  .focus__item_title {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 1240px) {
 
 }
 

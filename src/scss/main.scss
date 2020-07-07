@@ -18,14 +18,15 @@
 
 body {
   font-size: 15px;
-  width: 1920px;
+  width: 100%;
+  max-width: 1940px;
   margin: 0 auto;
   position: relative;
   line-height: 1.65;
   font-family: $default-font;
   overflow-x: hidden;
   color: $text;
-  background-color: $bgr;
+  background-color: #313131;
   input, textarea {
     font-family: $default-font;
     border: #666 1px solid;

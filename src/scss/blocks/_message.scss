@@ -8,7 +8,10 @@
   padding-right: 580px;
   padding-bottom: 500px;
 
-  background-color: $alt_bgr_3;
+  color: $alt-text;
+
+  background: $bgr url("../../img/form_bgr.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .message__title {
@@ -32,7 +35,7 @@
   justify-content: space-between;
 }
 
-.message__header_data {
+.message__user_data {
   width: 360px;
   height: 50px;
 
@@ -41,7 +44,9 @@
 
   font-size: 18px;
 
+  text-align: center;
   border: none;
+  border-radius: 3px;
   box-sizing: border-box;
 
   &::placeholder {
@@ -49,7 +54,7 @@
   }
 }
 
-.message__main_content {
+.message__user_text {
   width: 100%;
   height: 200px;
 
@@ -60,6 +65,7 @@
   font-family: $default-font;
 
   border: none;
+  border-radius: 3px;
   box-sizing: border-box;
 
   &::placeholder {
@@ -72,8 +78,15 @@
   margin: 0 auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1900px) {
+  .message {
+    @include adapt_padding;
+    padding-bottom: 500px;
+  }
 
+  .message__user_data {
+    width: 48%;
+  }
 }
 
 @media (max-width: 992px) {

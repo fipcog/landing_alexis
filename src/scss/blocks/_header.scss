@@ -7,7 +7,12 @@
   width: 100%;
   height: 75px;
 
-  padding: 0 390px;
+  @include desct_padding;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  background-color: $bgr;
+
   box-sizing: border-box;
 }
 
@@ -53,6 +58,10 @@
 
 .header__list_item {
   margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .header__nav_link {
@@ -75,7 +84,8 @@
 
   color: $alt-text;
 
-  background: $alt_bgr;
+  background: url("../../img/header_bgr.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .header__title {
@@ -140,7 +150,19 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1900px) {
+  .header__nav_panel {
+    @include adapt_padding;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header__list_item {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1240px) {
 
 }
 

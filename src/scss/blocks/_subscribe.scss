@@ -5,8 +5,7 @@
 
   @include desct_padding;
 
-  color: $alt-text;
-  background-color: $alt_bgr;
+  background-color: $bgr;
 }
 
 .subscribe__header {
@@ -32,7 +31,7 @@
 
   font-size: 18px;
 
-  background-color: $alt_bgr_2;
+  background-color: $alt_bgr;
   border: none;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -46,8 +45,10 @@
   border-top-left-radius: inherit;
 }
 
-@media (max-width: 1200px) {
-
+@media (max-width: 1900px) {
+  .subscribe {
+    @include adapt_padding;
+  }
 }
 
 @media (max-width: 992px) {

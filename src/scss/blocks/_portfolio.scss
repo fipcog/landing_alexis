@@ -4,6 +4,8 @@
   align-items: center;
 
   @include desct_padding;
+
+  background-color: $bgr;
 }
 
 .portfolio__title {
@@ -132,8 +134,44 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1900px) {
+  .portfolio {
+    @include adapt_padding;
+  }
 
+  .portfolio__list {
+    width: 1130px;
+  }
+
+  .portfolio__item {
+    margin-right: 25px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 1620px) {
+  .portfolio__list {
+    width: 1025px;
+  }
+
+  .portfolio__item {
+    width: 500px;
+    height: 403px;
+    margin-right: 25px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .portfolio__detail {
+    opacity: 1;
+  }
+
+  .portfolio__btn_wrapper {
+    height: 340px;
+  }
 }
 
 @media (max-width: 992px) {
