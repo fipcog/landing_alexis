@@ -57,6 +57,12 @@ h2 {
   font-size: 50px;
 }
 
+@media (max-width: 576px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
 @import "blocks/btn";
 @import "blocks/header";
 @import "blocks/main";

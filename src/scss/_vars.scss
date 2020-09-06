@@ -5,9 +5,10 @@ $accent_3: #feb960;
 $accent_4: #fc5f45;
 $text: #454545;
 $alt-text: #efefef;
-$bgr: #ffffff;
+$bgr: #fcfcfc;
 $footer_bgr: rgba(50, 50, 50, 0.8);
 $alt_bgr: #f7f7f7;
+$alt_items_bgr: #ffffff;
 $img_grad: linear-gradient(to top, #daaca4, #cccccc 75%);
 $img_border: #a7a7a7;
 $shadow: rgba(236, 236, 236, 0.55);
@@ -34,7 +35,7 @@ $transparent_gray: rgba(50, 50, 50, 0.47);
   box-sizing: border-box;
 }
 
-@mixin underline ($color) {
+@mixin underline ($color, $w: 265px) {
   content: "";
 
   position: absolute;
@@ -42,7 +43,7 @@ $transparent_gray: rgba(50, 50, 50, 0.47);
   left: -5px;
 
   display: block;
-  width: 265px;
+  width: $w;
   height: 3px;
 
   background-color: $color;

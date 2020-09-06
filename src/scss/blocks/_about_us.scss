@@ -48,7 +48,7 @@
   padding-left: 85px;
   padding-right: 85px;
 
-  background-color: $bgr;
+  background-color: $alt_items_bgr;
   @include shadow;
   box-sizing: border-box;
 }
@@ -68,18 +68,52 @@
   }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1290px) {
+  .about_us {
+    justify-content: center;
+    flex-wrap: wrap;
 
+    position: relative;
+
+    @include adapt_padding;
+  }
+
+  .about_us__img_wrapper {
+    height: auto;
+
+    order: 2;
+  }
+
+  .about_us__text_content {
+    position: inherit;
+    left: 0;
+
+    height: auto;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+
+    order: 1;
+  }
 }
 
 @media (max-width: 992px) {
+  .about_us__text_content {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 
+    margin-bottom: 10px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 610px) {
+  .about_us__text_content {
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
 
-}
+    margin-bottom: 0;
 
-@media (max-width: 576px) {
-
+    box-shadow: none;
+  }
 }
