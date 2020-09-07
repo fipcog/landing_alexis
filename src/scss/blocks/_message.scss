@@ -89,14 +89,26 @@
   }
 }
 
-@media (max-width: 992px) {
-
+@media (max-width: 1140px) {
+  .message {
+    padding-bottom: 700px;
+  }
 }
 
 @media (max-width: 768px) {
-
+  .message__user_data {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
+  .message {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 1300px;
+  }
 
+  .message__title_descr {
+    text-align: center;
+  }
 }

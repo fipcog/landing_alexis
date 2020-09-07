@@ -162,18 +162,149 @@
   }
 }
 
-@media (max-width: 1240px) {
-
-}
-
 @media (max-width: 992px) {
+  .header__nav {
+    position: fixed;
+    left: 0;
+    top: 0;
 
+    display: block;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(64, 64, 64, 0.87);
+
+    z-index: 1000;
+  }
+
+  .header__list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 290px;
+    height: 310px;
+
+    margin: auto auto;
+
+    overflow: scroll;
+    background-color: $bgr;
+    box-sizing: border-box;
+  }
+
+  .header__list_item {
+    width: 100%;
+    height: 50px;
+
+    margin: 0;
+  }
+
+  .header__nav_link {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    height: 50px;
+
+    color: $text;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      display: block;
+      width: 80%;
+      height: 2px;
+
+      margin: 0 auto;
+
+      background-color: $accent_4;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      transition: .2s;
+      text-decoration: none;
+      font-size: 1.1em;
+
+      &::after {
+        background-color: $accent_1;
+      }
+    }
+  }
+
+  .header__title {
+    width: 740px;
+  }
 }
 
 @media (max-width: 768px) {
+  .header__title {
+    width: 540px;
 
+    margin-bottom: 40px;
+
+    font-size: 50px;
+  }
+
+  .header__btn {
+    margin-bottom: 60px;
+  }
+
+  .header__features_wrapper {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .header__features_unit {
+    flex-direction: row;
+
+    width: 300px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+
+    .header__features_svg {
+      padding-right: 10px;
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 @media (max-width: 576px) {
+  .header__site_title {
+    height: 650px;
+  }
 
+  .header__title {
+    width: 90%;
+
+    font-size: 39px;
+  }
+
+  .header__btn {
+    margin-bottom: 50px;
+  }
 }

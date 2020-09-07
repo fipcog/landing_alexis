@@ -179,13 +179,50 @@
 }
 
 @media (max-width: 992px) {
+  .packages__list {
+    display: flex;
+    justify-content: center;
 
+    width: 100%;
+  }
+
+  .packages__item {
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  .packages__title_descr {
+    width: 100%;
 
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
+  .packages {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
+  .packages__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 340px;
+    height: 548px;
+
+    padding: 15px 55px;
+
+    background-color: $bgr;
+    @include shadow;
+
+    box-sizing: border-box;
+  }
 }
