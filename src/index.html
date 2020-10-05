@@ -519,6 +519,14 @@
             </div>
             <nav class="header__nav">
                 <ul class="header__list">
+                    <li class="header__list_item header__list_item--list_head">
+                        <div class="header__logo header__logo--adapt">
+                            <a class="header__logo_link" href="#">
+                                <span>A</span>lexis
+                            </a>
+                        </div>
+                        <button class="header__close" type="button"></button>
+                    </li>
                     <li class="header__list_item">
                         <a class="header__nav_link" href="#id">About Us</a>
                     </li>
@@ -537,8 +545,43 @@
                     <li class="header__list_item">
                         <a class="header__nav_link" href="#id">Contact</a>
                     </li>
+                    <li class="header__list_item header__list_item--list_footer">
+                        <ul class="header__list__social_list">
+                            <li class="header__list__social_item">
+                                <a class="header__list__social_link" href="#">
+                                    <svg class="header__list__link_svg" width="30px" height="31px">
+                                        <use xlink:href="#footer_fb"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__list__social_item">
+                                <a class="header__list__social_link" href="#">
+                                    <svg class="header__list__link_svg" width="31px" height="26px">
+                                        <use xlink:href="#footer_tw"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__list__social_item">
+                                <a class="header__list__social_link" href="#">
+                                    <svg class="header__list__link_svg" width="30px" height="31px">
+                                        <use xlink:href="#footer_inst"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__list__social_item">
+                                <a class="header__list__social_link" href="#">
+                                    <svg class="header__list__link_svg" width="28px" height="31px">
+                                        <use xlink:href="#footer_g"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
+            <button class="header__hamburger" type="button">
+                <span class="header__hamburger_item"></span>
+            </button>
         </div>
         <div class="header__site_title">
             <h1 class="header__title">We design things with love and passion.</h1>
@@ -1098,7 +1141,7 @@
                     </a>
                 </li>
                 <li class="footer__list_item">
-                    <a class="" href="#">
+                    <a class="footer__link" href="#">
                         <svg class="footer__link_svg" width="31px" height="26px">
                             <use xlink:href="#footer_tw"/>
                         </svg>

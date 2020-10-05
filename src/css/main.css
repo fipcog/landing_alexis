@@ -139,7 +139,7 @@ h2 {
   .header__logo_link span {
     color: #fc5f45; }
   .header__logo_link:hover span {
-    transition: .2s;
+    transition: .1s;
     color: #38c695; }
 
 .header__nav {
@@ -217,6 +217,100 @@ h2 {
     .header__features_unit:last-child .header__features_svg {
       fill: #feb960; }
 
+.header__list_item--list_head, .header__list_item--list_footer {
+  display: none; }
+
+.header__hamburger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box; }
+  .header__hamburger:hover {
+    cursor: pointer; }
+    .header__hamburger:hover .header__hamburger_item, .header__hamburger:hover .header__hamburger_item::before, .header__hamburger:hover .header__hamburger_item::after {
+      transition: .1s;
+      background-color: #38c695; }
+  .header__hamburger--active .header__hamburger_item, .header__hamburger--active .header__hamburger_item::before, .header__hamburger--active .header__hamburger_item::after {
+    background-color: #fc5f45; }
+
+.header__hamburger_item {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #454545; }
+  .header__hamburger_item::before {
+    content: "";
+    position: relative;
+    top: -12px;
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #454545; }
+  .header__hamburger_item::after {
+    content: "";
+    position: relative;
+    bottom: -7px;
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #454545; }
+
+.header__close {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: -20px;
+  background-color: transparent;
+  border: none; }
+  .header__close::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    display: block;
+    width: 45px;
+    height: 3px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: #454545; }
+  .header__close::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    display: block;
+    width: 45px;
+    height: 3px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #454545; }
+
+.header__close:hover {
+  cursor: pointer; }
+  .header__close:hover::before, .header__close:hover::after {
+    transition: .1s;
+    background-color: #38c695; }
+
+.header__list__social_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 80px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none; }
+  .header__list__social_list li > a:hover {
+    transition: .1s;
+    fill: #38c695; }
+
 @media (max-width: 1900px) {
   .header__nav_panel {
     padding: 8% 15%;
@@ -227,11 +321,13 @@ h2 {
     margin-right: 15px; } }
 
 @media (max-width: 992px) {
+  .header__hamburger {
+    display: flex; }
   .header__nav {
     position: fixed;
     left: 0;
     top: 0;
-    display: block;
+    display: none;
     width: 100vw;
     height: 100vh;
     background-color: rgba(64, 64, 64, 0.87);
@@ -244,8 +340,8 @@ h2 {
     right: 0;
     display: flex;
     flex-direction: column;
-    width: 290px;
-    height: 310px;
+    width: 350px;
+    max-height: 450px;
     margin: auto auto;
     overflow: scroll;
     background-color: #fcfcfc;
@@ -254,6 +350,17 @@ h2 {
     width: 100%;
     height: 50px;
     margin: 0; }
+  .header__list_item--list_head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    box-sizing: border-box; }
+  .header__list_item--list_footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto; }
   .header__nav_link {
     position: relative;
     display: block;
@@ -309,6 +416,9 @@ h2 {
       margin-bottom: 0; } }
 
 @media (max-width: 576px) {
+  .header__list {
+    width: 290px;
+    min-height: 310px; }
   .header__site_title {
     height: 650px; }
   .header__title {
