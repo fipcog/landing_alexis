@@ -219,57 +219,6 @@
   }
 }
 
-.header__close {
-  position: relative;
-
-  display: block;
-  width: 40px;
-  height: 40px;
-
-  margin-right: -20px;
-
-  background-color: transparent;
-  border: none;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    left: -6px;
-
-    display: block;
-    width: 45px;
-    height: 3px;
-
-    transform: rotate(-45deg);
-
-    background-color: $text;
-  }
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    left: -6px;
-
-    display: block;
-    width: 45px;
-    height: 3px;
-
-    transform: rotate(45deg);
-
-    background-color: $text;
-  }
-}
-.header__close:hover {
-  cursor: pointer;
-
-  &::before, &::after {
-    transition: .1s;
-    background-color: $accent_1;
-  }
-}
-
 .header__list__social_list {
   display: flex;
   flex-direction: row;

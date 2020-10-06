@@ -149,6 +149,7 @@
   border-radius: 50%;
 
   &:hover {
+    cursor: pointer;
     background: transparent;
   }
 }
@@ -192,12 +193,10 @@
   box-sizing: border-box;
   z-index: 1;
 
-  &:before {
+  &::before {
     content: "";
 
     position: absolute;
-    top: -40px;
-    left: 105px;
 
     width: 0;
     height: 0;
@@ -208,11 +207,39 @@
   }
 }
 
+.team__about--first::before {
+  display: block;
+  top: -40px;
+  left: 105px;
+}
+
+.team__about--second::before {
+  display: block;
+  top: -40px;
+  left: 390px;
+}
+
+.team__about--third::before {
+  display: block;
+  top: -40px;
+  right: 390px;
+}
+
+.team__about--fourth::before {
+  display: block;
+  top: -40px;
+  right: 105px;
+}
+
 .team__about_title {
   margin: 0;
   margin-bottom: 30px;
 
   font-size: 20px;
+}
+
+.team__about .btn__close {
+  display: none;
 }
 
 .team__about_container {
@@ -334,8 +361,51 @@
     opacity: 1;
   }
 
+  .team__shading {
+      position: fixed;
+      left: 0;
+      top: 0;
+
+      display: none;
+      width: 100vw;
+      height: 100vh;
+
+      background-color: rgba(64, 64, 64, 0.87);
+
+      z-index: 1000;
+  }
+
   .team__about {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
     display: none;
+
+    width: 640px;
+    height: 600px;
+
+    margin: auto auto;
+
+    overflow: scroll;
+    background-color: $bgr;
+    box-sizing: border-box;
+
+    z-index: 1001;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .team__about .btn__close {
+    display: block;
+
+    position: absolute;
+    top: 30px;
+    right: 50px;
   }
 }
 
@@ -380,5 +450,49 @@
 
   .team__list {
     width: 265px;
+  }
+
+  .team__about {
+    width: 360px;
+    height: 400px;
+
+    padding: 40px 20px;
+    margin: auto auto;
+
+    overflow: scroll;
+    background-color: $bgr;
+    box-sizing: border-box;
+
+    z-index: 1001;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .team__about_container {
+    flex-direction: column;
+  }
+
+  .team__descr {
+    width: 100%;
+
+    margin-bottom: 30px;
+  }
+
+  .team__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    border-left: none;
+  }
+
+  .team__links_item {
+    width: 50%;
   }
 }
