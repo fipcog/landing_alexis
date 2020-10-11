@@ -23,6 +23,9 @@
   src: url("../fonts/WisdomScript/WisdomScript.otf");
   font-weight: normal; }
 
+html {
+  scroll-behavior: smooth; }
+
 ::-webkit-input-placeholder {
   color: #666;
   font-size: 16px; }
@@ -50,6 +53,14 @@
 
 :focus::placeholder {
   color: transparent; }
+
+::-moz-selection {
+  background-color: #fc5f45;
+  color: #fff; }
+
+::selection {
+  background-color: #fc5f45;
+  color: #fff; }
 
 body {
   font-size: 15px;

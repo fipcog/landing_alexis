@@ -7,17 +7,27 @@
     const hamburger = document.querySelector(".header__hamburger");
 
     const toggleBtn = () => hamburger.classList.toggle("header__hamburger--active");
+    const showMenu = () => {
+        nav.style.display = "block";
+        toggleBtn();
+    }
+    const hideMenu = () => {
+        nav.style.display = "none";
+        toggleBtn();
+    }
 
-    const toggleMenu = function (e) {
+    const toggleMenu = function (event) {
 
-        if (e.target.closest(".header__hamburger")) {
-            nav.style.display = "block";
-            toggleBtn();
-        }
+        if (event.target.closest(".header__hamburger")) {
 
-        if (e.target.closest(".btn__close")) {
-            nav.style.display = "none";
-            toggleBtn();
+            nav.addEventListener("click",
+                (e) => {
+                    if(e.target.closest("A") || e.target.closest(".btn__close")) {
+                        hideMenu();
+                    }
+                } , {once: true});
+
+            showMenu();
         }
     };
 
@@ -26,10 +36,10 @@
     window.addEventListener("resize", () => {
 
         if (header.offsetWidth > 992) {
-            nav.style.display = "block";
+            showMenu();
         } else {
-            nav.style.display = "none";
-            hamburger.classList.remove("header__hamburger--active")
+            hideMenu();
+            hamburger.classList.remove("header__hamburger--active");
         }
     });
 }
@@ -38,20 +48,20 @@
 {
     const teamMocks = [
         {
-            name: "Michael",
-            title: "About Michael.",
+            "name": "Michael",
+            "title": "About Michael.",
         },
         {
-            name: "David",
-            title: "About David.",
+            "name": "David",
+            "title": "About David.",
         },
         {
-            name: "Anna",
-            title: "About Anna.",
+            "name": "Anna",
+            "title": "About Anna.",
         },
         {
-            name: "Jason",
-            title: "About Jason.",
+            "name": "Jason",
+            "title": "About Jason.",
         },
     ];
 
@@ -101,25 +111,28 @@
         }
     };
 
+    const showPopupTeam = () => {
+        shadingElem.style.display = "block";
+        teamAbout.style.display = "block";
+    };
+    const hidePopupTeam = () => {
+        teamAbout.style.display = "none";
+        shadingElem.style.display = "none";
+    }
+
     const togglePopup = function (e) {
 
         if(team.offsetWidth <= 1570) {
 
             if(e.target.closest(".team__btn")) {
-                shadingElem.style.display = "block";
-                teamAbout.style.display = "block";
+                showPopupTeam();
             }
 
             if(e.target.closest(".btn__close")) {
-                teamAbout.style.display = "none";
-                shadingElem.style.display = "none";
+                hidePopupTeam();
             }
         }
     };
-
-    //стоковое состояние при загрузке страницы
-    let activeClass = "team__about--first";
-    replaceContent("Michael");
 
     team.addEventListener("click", toggleContent);
     team.addEventListener("click", togglePopup);
@@ -127,11 +140,14 @@
     window.addEventListener("resize", () => {
 
         if(team.offsetWidth > 1570) {
-            teamAbout.style.display = "block";
+            showPopupTeam();
             shadingElem.style.display = "none";
         } else {
-            teamAbout.style.display = "none";
-            shadingElem.style.display = "none";
+            hidePopupTeam();
         }
     });
+
+    //стоковое состояние при загрузке страницы
+    let activeClass = "team__about--first";
+    replaceContent("Michael");
 }

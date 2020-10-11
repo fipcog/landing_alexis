@@ -7,6 +7,7 @@
     <title>Project</title>
     <meta name="description" content="">
 
+    <link rel="icon" href="img/favicon/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -510,10 +511,10 @@
         </symbol>
     </svg>
 
-    <header class="header">
+    <header class="header" id="header" >
         <div class="header__nav_panel">
             <div class="header__logo">
-                <a class="header__logo_link" href="#">
+                <a class="header__logo_link" href="#header">
                     <span>A</span>lexis
                 </a>
             </div>
@@ -521,29 +522,29 @@
                 <ul class="header__list">
                     <li class="header__list_item header__list_item--list_head">
                         <div class="header__logo header__logo--adapt">
-                            <a class="header__logo_link" href="#">
+                            <a class="header__logo_link" href="#header">
                                 <span>A</span>lexis
                             </a>
                         </div>
                         <button class="btn__close btn" type="button"></button>
                     </li>
                     <li class="header__list_item">
-                        <a class="header__nav_link" href="#id">About Us</a>
+                        <a class="header__nav_link" href="#about">About Us</a>
                     </li>
                     <li class="header__list_item">
-                        <a class="header__nav_link" href="#id">Our Focus</a>
+                        <a class="header__nav_link" href="#focus">Our Focus</a>
                     </li>
                     <li class="header__list_item">
-                        <a class="header__nav_link" href="#id">Portfolio</a>
+                        <a class="header__nav_link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="header__list_item">
-                        <a class="header__nav_link" href="#id">Our Team</a>
+                        <a class="header__nav_link" href="#team">Our Team</a>
                     </li>
                     <li class="header__list_item">
-                        <a class="header__nav_link" href="#id">Pricing</a>
+                        <a class="header__nav_link" href="#pricing">Pricing</a>
                     </li>
                     <li class="header__list_item">
-                        <a class="header__nav_link" href="#id">Contact</a>
+                        <a class="header__nav_link" href="#contact">Contact</a>
                     </li>
                     <li class="header__list_item header__list_item--list_footer">
                         <ul class="header__list__social_list">
@@ -609,7 +610,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="main__about_us about_us">
+        <section class="main__about_us about_us" id="about">
             <div class="about_us__img_wrapper">
                 <img class="about_us__img" src="img/office.jpg" alt="office">
             </div>
@@ -632,7 +633,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__focus focus">
+        <section class="main__focus focus" id="focus">
             <div class="focus__title_wrapper">
                 <h2 class="focus__title">Our Focus.</h2>
                 <span class="focus__title_descr">We understand your requirement and provide quality works.</span>
@@ -682,7 +683,7 @@
             </button>
             <span class="video__descr">Click to play the video</span>
         </section>
-        <section class="main__portfolio portfolio">
+        <section class="main__portfolio portfolio" id="portfolio">
             <div class="portfolio__title_wrapper">
                 <h2 class="portfolio__title">Portfolio.</h2>
                 <span class="portfolio__title_descr">We understand your requirement and provide quality works.</span>
@@ -879,7 +880,7 @@
                 </li>
             </ul>
         </section>
-        <section class="main__team team">
+        <section class="main__team team" id="team">
             <div class="team__title_wrapper">
                 <h2 class="team__title">Our Team.</h2>
                 <span class="team__title_descr">We understand your requirement and provide quality works.</span>
@@ -1035,7 +1036,7 @@
                 </li>
             </ul>
         </section>
-        <section class="main__packages packages">
+        <section class="main__packages packages" id="pricing">
             <div class="packages__title_wrapper">
                 <h2 class="packages__title">Pricing Table.</h2>
                 <span class="packages__title_descr">We understand your requirement and provide quality works.</span>
@@ -1097,21 +1098,21 @@
         <section class="main__subscribe subscribe">
             <h2 class="subscribe__header">Subscribe to Newsletter</h2>
             <form class="subscribe__form" method="get" name="subscribe">
-                <input class="subscribe__email" type="email" name="email" placeholder="Enter your email">
+                <input class="subscribe__email" type="email" name="email" placeholder="Enter your email" required>
                 <button class="subscribe__btn btn">Subscribe now</button>
             </form>
         </section>
-        <section class="main__message message">
+        <section class="main__message message" id="contact">
             <div class="message__title_wrapper">
                 <h2 class="message__title">Get in Touch.</h2>
                 <span class="message__title_descr">We understand your requirement and provide quality works.</span>
             </div>
-            <form class="message__form" method="get" name="message">
-                <input class="message__user_data" type="text" name="person" placeholder="Your Name">
-                <input class="message__user_data" type="email" name="email" placeholder="Your Email">
-                <input class="message__user_data" type="text" name="subject" placeholder="Subject">
-                <input class="message__user_data" type="text" name="Budget" placeholder="Project Budget">
-                <textarea class="message__user_text" name="message" placeholder="Your Message"></textarea>
+            <form class="message__form" method="post" name="message">
+                <input class="message__user_data" type="text" name="person" placeholder="Your Name" required>
+                <input class="message__user_data" type="email" name="email" placeholder="Your Email" required>
+                <input class="message__user_data" type="text" name="subject" placeholder="Subject" required>
+                <input class="message__user_data" type="text" name="Budget" placeholder="Project Budget" required>
+                <textarea class="message__user_text" name="message" placeholder="Your Message" required></textarea>
                 <button class="message__btn btn" type="submit">Send Message</button>
             </form>
         </section>
@@ -1119,7 +1120,7 @@
     <footer class="footer">
         <section class="footer__section">
             <div class="footer__logo">
-                <a class="footer__logo_link" href="#">
+                <a class="footer__logo_link" href="#header">
                     <span>A</span>lexis
                 </a>
             </div>
