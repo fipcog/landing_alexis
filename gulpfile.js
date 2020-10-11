@@ -22,7 +22,7 @@ gulp.task('browserify', function() {
     return browserify('./src/js/main.js')
         .bundle()
         .pipe(source('bundle.js'))
-        .pipe(gulp.dest('./src/js/bundle/'));
+        .pipe(gulp.dest('./src/js_bundle/'));
 });
 
 gulp.task('serve', function() {
@@ -33,6 +33,9 @@ gulp.task('serve', function() {
     gulp.watch("scr/*.html").on('change', () => {
         browserSync.reload();
     });
+    gulp.watch("src/js/**/*.js", gulp.series('browserify')).on('change', () => {
+        browserSync.reload();
+    });
 });
 
-gulp.task('default', gulp.series('sass', 'browserify', 'serve'));
+gulp.task('default', gulp.series('sass', 'serve'));
