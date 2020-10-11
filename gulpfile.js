@@ -3,6 +3,8 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
 
 gulp.task('sass', function() {
     return gulp.src('src/scss/**/*.scss')
@@ -16,6 +18,13 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('browserify', function() {
+    return browserify('./src/js/main.js')
+        .bundle()
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest('./src/js/bundle/'));
+});
+
 gulp.task('serve', function() {
     browserSync.init({
         server: "src/"
@@ -26,4 +35,4 @@ gulp.task('serve', function() {
     });
 });
 
-gulp.task('default', gulp.series('sass', 'serve'));
+gulp.task('default', gulp.series('sass', 'browserify', 'serve'));
