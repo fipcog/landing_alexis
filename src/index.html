@@ -1098,8 +1098,8 @@
         <section class="main__subscribe subscribe">
             <h2 class="subscribe__header">Subscribe to Newsletter</h2>
             <form class="subscribe__form" method="get" name="subscribe">
-                <input class="subscribe__email" type="email" name="email" placeholder="Enter your email" required>
-                <button class="subscribe__btn btn">Subscribe now</button>
+                <input class="subscribe__email" type="text" name="email" placeholder="Enter your email">
+                <button class="subscribe__btn btn" type="submit" name="btn">Subscribe now</button>
             </form>
         </section>
         <section class="main__message message" id="contact">
@@ -1107,13 +1107,13 @@
                 <h2 class="message__title">Get in Touch.</h2>
                 <span class="message__title_descr">We understand your requirement and provide quality works.</span>
             </div>
-            <form class="message__form" method="post" name="message">
-                <input class="message__user_data" type="text" name="person" placeholder="Your Name" required>
-                <input class="message__user_data" type="email" name="email" placeholder="Your Email" required>
-                <input class="message__user_data" type="text" name="subject" placeholder="Subject" required>
-                <input class="message__user_data" type="text" name="Budget" placeholder="Project Budget" required>
-                <textarea class="message__user_text" name="message" placeholder="Your Message" required></textarea>
-                <button class="message__btn btn" type="submit">Send Message</button>
+            <form class="message__form" method="get" name="message">
+                <input class="message__user_data" type="text" name="person" placeholder="Your Name">
+                <input class="message__user_data" type="text" name="email" placeholder="Your Email">
+                <input class="message__user_data" type="text" name="subject" placeholder="Subject">
+                <input class="message__user_data" type="text" name="Budget" placeholder="Project Budget">
+                <textarea class="message__user_text" name="message" placeholder="Your Message"></textarea>
+                <button class="message__btn btn" type="submit" name="btn">Send Message</button>
             </form>
         </section>
     </main>

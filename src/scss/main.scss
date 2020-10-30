@@ -6,6 +6,14 @@ html {
   scroll-behavior: smooth;
 }
 
+
+body .error {
+  background-color: $accent_4;
+  &::placeholder {
+    color: white;
+  }
+}
+
 ::placeholder {
   color: #666;
   font-size: 16px;

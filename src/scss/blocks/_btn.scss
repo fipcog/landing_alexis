@@ -77,6 +77,10 @@
   }
 }
 
+.btn[disabled] {
+  background-color: gray;
+}
+
 .btn__close:hover {
   background-color: transparent;
   cursor: pointer;

@@ -26,6 +26,17 @@
 html {
   scroll-behavior: smooth; }
 
+body .error {
+  background-color: #fc5f45; }
+  body .error::-webkit-input-placeholder {
+    color: white; }
+  body .error:-ms-input-placeholder {
+    color: white; }
+  body .error::-ms-input-placeholder {
+    color: white; }
+  body .error::placeholder {
+    color: white; }
+
 ::-webkit-input-placeholder {
   color: #666;
   font-size: 16px; }
@@ -155,6 +166,9 @@ h2 {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     background-color: #454545; }
+
+.btn[disabled] {
+  background-color: gray; }
 
 .btn__close:hover {
   background-color: transparent;
